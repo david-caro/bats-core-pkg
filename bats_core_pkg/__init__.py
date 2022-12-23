@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 import sys
 import subprocess
+from pathlib import Path
 
 
 
 def main():
-    proc = subprocess.run(["bats_core_pkg/dist/bin/bats"] + sys.argv[1:], check=False)
+    curfile = Path(__file__)
+    bats_path = curfile.absolute().parent / "dist/bin/bats"
+    proc = subprocess.run([bats_path] + sys.argv[1:], check=False)
     return proc.returncode
 
 

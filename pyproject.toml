@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bats-core-pkg"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python wrapper on tops of bats-core"
 authors = ["David Caro <dcaro@wikimedia.org>"]
 homepage = "https://github.com/david-caro/bats-core-pkg"
@@ -13,7 +13,9 @@ classifiers = [
 readme = "README.md"
 packages = [{include = "bats_core_pkg"}]
 include = [
-    { path = "bats/dist", format = ["sdist", "wheel"] }
+    "bats_core_pkg/dist/*/*/*",
+    "bats_core_pkg/dist/*/*",
+    "bats_core_pkg/dist/*",
 ]
 
 [tool.poetry.scripts]

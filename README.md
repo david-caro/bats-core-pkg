@@ -1,2 +1,2 @@
 # bats-core-pkg
-python package to install bats-core
+Simple wrapper to bats-core to be able to pull it from pypi.

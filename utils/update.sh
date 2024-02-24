@@ -5,7 +5,7 @@ set -o errexit
 
 
 BATS_LATEST=https://api.github.com/repos/bats-core/bats-core/releases/latest
-OUTDIR=$(realpath $(dirname $0)/..)/bats
+OUTDIR=$(realpath $(dirname $0)/..)/bats_core_pkg
 
 main() {
     local tar_url=$(
@@ -14,8 +14,6 @@ main() {
     )
 
     echo "Downloading the latest bats version to $OUTDIR ($tar_url)"
-    rm -rf "$OUTDIR"
-    mkdir -p "$OUTDIR"
     cd "$OUTDIR"
 
     curl --location "$tar_url" \

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bats-core-pkg"
-version = "0.1.10-2"
+version = "0.1.11-1"
 description = "Python wrapper on tops of bats-core"
 authors = ["David Caro <dcaro@wikimedia.org>"]
 homepage = "https://github.com/david-caro/bats-core-pkg"

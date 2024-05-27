@@ -25,8 +25,8 @@ get_latest() {
     echo "Downloading the latest version to $outdir ($tar_url)"
     cd "$tmpdir"
 
-    curl --location "$tar_url" \
-        | tar xvzf -
+    curl -s --location "$tar_url" \
+        | tar xzf -
 
     mv "$tmpdir"/* "$outdir/"
     rm -rf "$tmpdir"
